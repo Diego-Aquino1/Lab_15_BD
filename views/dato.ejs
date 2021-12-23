@@ -1,0 +1,29 @@
+<%- include("template/cabecera", {tituloWeb: 'Blog'}) %>
+
+    <h1><%= listaDatos %></h1>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Descripción</th>
+          </tr>
+        </thead>
+        
+        <tbody>
+         
+        <% if (arrayDatos.length > 0) { %>
+            <% arrayDatos.forEach(Dato => { %>
+                <tr>
+                    <th scope="row"><%= Dato1.id %></th>
+                    <td><%= Dato.nombre %> </td>
+                    <td><%= Dato.descripcion %></td>
+                    <td>@mdo</td>
+                  </tr>
+            <% }) %>
+        <% } %>
+        </tbody>
+      </table>
+    
+<%- include("template/footer") %>
